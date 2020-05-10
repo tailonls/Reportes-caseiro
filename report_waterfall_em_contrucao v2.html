@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Report tailon</title>
+	<style>
+		body { font-family:Calibri, Tahoma, Arial;}
+
+		.TabControl { width:100%; height:600px; }
+
+		.TabControl #header { width: 21%; overflow:hidden; float: left;}
+
+		#cabecalho { width:100%; float: left; margin-bottom:4px; background:#3A5FCD; height: 100px; }
+
+		#rodape { width:100%; float: left; margin-bottom:4px; background:#3A5FCD; height: 100px; }
+
+		.TabControl #content{ height:100%; margin-left: 21%; }
+
+		.TabControl .abas{ display:contents; }
+
+		.aba{ height:70px; margin-right:4px; margin-bottom:4px; background:#3A5FCD; overflow: hidden;}
+
+		.aba span{ padding:5px; color:#fff; float: left; }
+
+		.ativa { background:#27408B; }
+
+		.ativa span, .selected span { color:#fff; }
+
+		.TabControl .conteudo{ background:#27408B; display:none; color:#fff; padding:10px; margin-bottom: 30px; }
+
+		.TabControl .conteudo span { height: 60px; display: block; margin-top: 10px; }
+
+		.selected {	background:#27408B; }
+	</style>
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript">
+
+		$(document).ready(function () {
+			$("#content div:nth-child(1)").show();
+			$(".abas li:first div").addClass("selected");
+
+			$(".aba").click(function () {
+				$(".aba").removeClass("selected");
+				$(this).addClass("selected");
+				var indice = $(this).parent().index();
+				indice++;
+				$("#content div").hide();
+				$("#content div:nth-child(" + indice + ")").show();
+			});
+
+			$(".aba").hover(
+				function () { $(this).addClass("ativa") },
+				function () { $(this).removeClass("ativa") }
+			);
+		});
+
+	</script>
+</head>
+
+<body>
+	<div id="cabecalho">titulo aqui</div>
+	<div id="sub_cabecalho">Dados aqui</div>
+
+	<div class="TabControl">
+		<div id="header">
+
+			<ul class="abas">
+				<li>
+					<div class="aba">
+						<span>Cenario 1: esse cenario é o cenario 1 por que sim çijoç oijasdf oasid oaisdfo uhasd oçi hoi  pçasdj faijsd foija dsopfji oiji dsgfi jpodfisj godfis jgoi </span>
+					</div>
+				</li>
+				<li>
+					<div class="aba">
+						<span>Cenario 2: esse cenario é o cenario 2 por que sim</span>
+					</div>
+				</li>
+				<li>
+					<div class="aba">
+						<span>Cenario 3: esse cenario é o cenario 3 por que sim</span>
+					</div>
+				</li>
+				<li>
+					<div class="aba">
+						<span>Cenario 4: esse cenario é o cenario 4 por que sim</span>
+					</div>
+				</li>
+				<li>
+					<div class="aba">
+						<span>Cenario 5: esse cenario é o cenario 4 por que sim</span>
+					</div>
+				</li>
+				<li>
+					<div class="aba">
+						<span>Cenario 6: esse cenario é o cenario 4 por que sim</span>
+					</div>
+				</li>
+				<li>
+					<div class="aba">
+						<span>Cenario 7: esse cenario é o cenario 4 por que sim</span>
+					</div>
+				</li>
+				<li>
+					<div class="aba">
+						<span>Cenario 8: esse cenario é o cenario 4 por que sim</span>
+					</div>
+				</li>
+				<li>
+					<div class="aba">
+						<span>Cenario 9: esse cenario é o cenario 4 por que sim</span>
+					</div>
+				</li>
+				<li>
+					<div class="aba">
+						<span>Cenario 9: esse cenario é o cenario 4 por que sim</span>
+					</div>
+				</li>
+				<li>
+					<div class="aba">
+						<span>Cenario 9: esse cenario é o cenario 4 por que sim</span>
+					</div>
+				</li>
+				<li>
+					<div class="aba">
+						<span>Cenario 000000000009: esse cenario é o cenario 4 por que sim</span>
+					</div>
+				</li>
+			</ul>
+
+		</div>
+
+		<div id="content">
+			<div class="conteudo">
+				<span>Cenario 1: esse cenario é o cenario 1 por que sim</span>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus facilisis mollis urna at vestibulum. Cras cursus, nibh vitae maximus accumsan, lorem dolor imperdiet tortor, in auctor lorem elit eu leo. Sed eu nisi velit. Maecenas pharetra volutpat aliquam. Proin venenatis libero quis tellus ullamcorper, ac condimentum dui consequat. Curabitur accumsan semper nulla, eget malesuada sem pulvinar ut. Mauris volutpat, justo in cursus finibus, mi turpis eleifend arcu, eu pretium diam justo vel nisl. Maecenas mi metus, gravida sed sagittis in, bibendum ut est. In suscipit ante mi, non ullamcorper sem dignissim nec. Vestibulum tincidunt mi sed sagittis dapibus. 
+					Pellentesque placerat nulla a gravida ultrices. Sed bibendum pretium nunc sit amet iaculis. Nulla facilisi.
+					Etiam nec nulla ipsum. In finibus, libero in elementum molestie, lorem nisi gravida orci, vel tristique nibh sapien rhoncus est. Aliquam lectus nunc, rhoncus sit amet erat id, iaculis consectetur felis. Etiam purus velit, consectetur placerat massa vitae, molestie semper justo. Proin faucibus scelerisque sapien quis gravida. Vestibulum malesuada arcu eget sollicitudin cursus. Aliquam vitae odio cursus, tincidunt eros non, cursus felis. Quisque justo sapien, ultricies eget purus vel, euismod rhoncus purus. Sed sed ipsum ante. Vestibulum vitae metus purus. Mauris gravida dui eget nibh laoreet hendrerit. Aenean vitae posuere libero, eu molestie lorem.
+					Nullam vel tellus orci. Duis laoreet id massa vel consectetur. 
+					Vestibulum eget lacus orci. Vestibulum non metus facilisis quam iaculis congue. Suspendisse eget elementum justo. Suspendisse at iaculis mauris. Praesent laoreet purus neque, sit amet vulputate leo dapibus dapibus. Phasellus facilisis blandit tortor vitae varius. Nunc sit amet interdum felis. Mauris quis dolor nec ex ullamcorper euismod.					
+					Nunc tempor consectetur mollis. Donec a sem et arcu rutrum posuere nec ut mauris. 
+					Nunc fermentum tortor sit amet lectus commodo mollis. Nam sodales ante neque, sed fermentum orci euismod ut. Donec molestie dui ligula, ac tincidunt leo luctus in. Pellentesque placerat eros justo, at malesuada dui feugiat in. Praesent accumsan rhoncus tellus. Vestibulum interdum dapibus lectus, in iaculis nunc gravida et. Proin lacus orci, tempus ut libero ut, volutpat varius ante.					
+					Morbi vitae blandit mi. Proin aliquet mi arcu, sit amet aliquam diam vulputate quis. 
+					Pellentesque et eros nunc. Nam lacinia porttitor nisl a tempus. Sed iaculis sapien neque, et fermentum sapien ultrices a. Quisque ligula nunc, rhoncus in quam eu, vehicula sagittis odio. Maecenas suscipit massa ac aliquet suscipit. Donec dapibus lorem nec tellus hendrerit semper. Mauris eu erat placerat, accumsan eros in, posuere lorem. Fusce vitae sodales nisl. Nunc tempus ligula eu dolor pretium imperdiet. In posuere vel nisi vel tincidunt.				
+				</p>
+				<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus facilisis mollis urna at vestibulum. Cras cursus, nibh vitae maximus accumsan, lorem dolor imperdiet tortor, in auctor lorem elit eu leo. Sed eu nisi velit. Maecenas pharetra volutpat aliquam. Proin venenatis libero quis tellus ullamcorper, ac condimentum dui consequat. Curabitur accumsan semper nulla, eget malesuada sem pulvinar ut. Mauris volutpat, justo in cursus finibus, mi turpis eleifend arcu, eu pretium diam justo vel nisl. Maecenas mi metus, gravida sed sagittis in, bibendum ut est. In suscipit ante mi, non ullamcorper sem dignissim nec. Vestibulum tincidunt mi sed sagittis dapibus. 
+						Pellentesque placerat nulla a gravida ultrices. Sed bibendum pretium nunc sit amet iaculis. Nulla facilisi.
+						Etiam nec nulla ipsum. In finibus, libero in elementum molestie, lorem nisi gravida orci, vel tristique nibh sapien rhoncus est. Aliquam lectus nunc, rhoncus sit amet erat id, iaculis consectetur felis. Etiam purus velit, consectetur placerat massa vitae, molestie semper justo. Proin faucibus scelerisque sapien quis gravida. Vestibulum malesuada arcu eget sollicitudin cursus. Aliquam vitae odio cursus, tincidunt eros non, cursus felis. Quisque justo sapien, ultricies eget purus vel, euismod rhoncus purus. Sed sed ipsum ante. Vestibulum vitae metus purus. Mauris gravida dui eget nibh laoreet hendrerit. Aenean vitae posuere libero, eu molestie lorem.
+						Nullam vel tellus orci. Duis laoreet id massa vel consectetur. 
+						Vestibulum eget lacus orci. Vestibulum non metus facilisis quam iaculis congue. Suspendisse eget elementum justo. Suspendisse at iaculis mauris. Praesent laoreet purus neque, sit amet vulputate leo dapibus dapibus. Phasellus facilisis blandit tortor vitae varius. Nunc sit amet interdum felis. Mauris quis dolor nec ex ullamcorper euismod.					
+						Nunc tempor consectetur mollis. Donec a sem et arcu rutrum posuere nec ut mauris. 
+						Nunc fermentum tortor sit amet lectus commodo mollis. Nam sodales ante neque, sed fermentum orci euismod ut. Donec molestie dui ligula, ac tincidunt leo luctus in. Pellentesque placerat eros justo, at malesuada dui feugiat in. Praesent accumsan rhoncus tellus. Vestibulum interdum dapibus lectus, in iaculis nunc gravida et. Proin lacus orci, tempus ut libero ut, volutpat varius ante.					
+						Morbi vitae blandit mi. Proin aliquet mi arcu, sit amet aliquam diam vulputate quis. 
+						Pellentesque et eros nunc. Nam lacinia porttitor nisl a tempus. Sed iaculis sapien neque, et fermentum sapien ultrices a. Quisque ligula nunc, rhoncus in quam eu, vehicula sagittis odio. Maecenas suscipit massa ac aliquet suscipit. Donec dapibus lorem nec tellus hendrerit semper. Mauris eu erat placerat, accumsan eros in, posuere lorem. Fusce vitae sodales nisl. Nunc tempus ligula eu dolor pretium imperdiet. In posuere vel nisi vel tincidunt.				
+					</p>
+					<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus facilisis mollis urna at vestibulum. Cras cursus, nibh vitae maximus accumsan, lorem dolor imperdiet tortor, in auctor lorem elit eu leo. Sed eu nisi velit. Maecenas pharetra volutpat aliquam. Proin venenatis libero quis tellus ullamcorper, ac condimentum dui consequat. Curabitur accumsan semper nulla, eget malesuada sem pulvinar ut. Mauris volutpat, justo in cursus finibus, mi turpis eleifend arcu, eu pretium diam justo vel nisl. Maecenas mi metus, gravida sed sagittis in, bibendum ut est. In suscipit ante mi, non ullamcorper sem dignissim nec. Vestibulum tincidunt mi sed sagittis dapibus. 
+							Pellentesque placerat nulla a gravida ultrices. Sed bibendum pretium nunc sit amet iaculis. Nulla facilisi.
+							Etiam nec nulla ipsum. In finibus, libero in elementum molestie, lorem nisi gravida orci, vel tristique nibh sapien rhoncus est. Aliquam lectus nunc, rhoncus sit amet erat id, iaculis consectetur felis. Etiam purus velit, consectetur placerat massa vitae, molestie semper justo. Proin faucibus scelerisque sapien quis gravida. Vestibulum malesuada arcu eget sollicitudin cursus. Aliquam vitae odio cursus, tincidunt eros non, cursus felis. Quisque justo sapien, ultricies eget purus vel, euismod rhoncus purus. Sed sed ipsum ante. Vestibulum vitae metus purus. Mauris gravida dui eget nibh laoreet hendrerit. Aenean vitae posuere libero, eu molestie lorem.
+							Nullam vel tellus orci. Duis laoreet id massa vel consectetur. 
+							Vestibulum eget lacus orci. Vestibulum non metus facilisis quam iaculis congue. Suspendisse eget elementum justo. Suspendisse at iaculis mauris. Praesent laoreet purus neque, sit amet vulputate leo dapibus dapibus. Phasellus facilisis blandit tortor vitae varius. Nunc sit amet interdum felis. Mauris quis dolor nec ex ullamcorper euismod.					
+							Nunc tempor consectetur mollis. Donec a sem et arcu rutrum posuere nec ut mauris. 
+							Nunc fermentum tortor sit amet lectus commodo mollis. Nam sodales ante neque, sed fermentum orci euismod ut. Donec molestie dui ligula, ac tincidunt leo luctus in. Pellentesque placerat eros justo, at malesuada dui feugiat in. Praesent accumsan rhoncus tellus. Vestibulum interdum dapibus lectus, in iaculis nunc gravida et. Proin lacus orci, tempus ut libero ut, volutpat varius ante.					
+							Morbi vitae blandit mi. Proin aliquet mi arcu, sit amet aliquam diam vulputate quis. 
+							Pellentesque et eros nunc. Nam lacinia porttitor nisl a tempus. Sed iaculis sapien neque, et fermentum sapien ultrices a. Quisque ligula nunc, rhoncus in quam eu, vehicula sagittis odio. Maecenas suscipit massa ac aliquet suscipit. Donec dapibus lorem nec tellus hendrerit semper. Mauris eu erat placerat, accumsan eros in, posuere lorem. Fusce vitae sodales nisl. Nunc tempus ligula eu dolor pretium imperdiet. In posuere vel nisi vel tincidunt.				
+						</p>
+			</div>
+			<div class="conteudo">
+				<span>Cenario 2: esse cenario é o cenario 2 por que sim</span>
+				<p>
+					Nunc tempor consectetur mollis. 
+					Donec a sem et arcu rutrum posuere nec ut mauris. Nunc fermentum tortor sit amet lectus commodo mollis. 
+					Nam sodales ante neque, sed fermentum orci euismod ut. 
+					Donec molestie dui ligula, ac tincidunt leo luctus in.
+					Pellentesque placerat eros justo, at malesuada dui feugiat in. Praesent accumsan rhoncus tellus.
+					Vestibulum interdum dapibus lectus, in iaculis nunc gravida et. 
+					Proin lacus orci, tempus ut libero ut, volutpat varius ante.
+				</p>
+			</div>
+			<div class="conteudo">
+				<span>Cenario 3: esse cenario é o cenario 3 por que sim</span>
+				<p>
+						Nunc tempor consectetur mollis. 
+						Donec a sem et arcu rutrum posuere nec ut mauris. Nunc fermentum tortor sit amet lectus commodo mollis. 
+						Nam sodales ante neque, sed fermentum orci euismod ut. 
+						Donec molestie dui ligula, ac tincidunt leo luctus in.
+						Pellentesque placerat eros justo, at malesuada dui feugiat in. Praesent accumsan rhoncus tellus.
+						Vestibulum interdum dapibus lectus, in iaculis nunc gravida et. 
+						Proin lacus orci, tempus ut libero ut, volutpat varius ante.
+					</p>
+			</div>
+			<div class="conteudo">
+				<span>Cenario 4: esse cenario é o cenario 4 por que sim</span>
+				<p>
+						Nunc tempor consectetur mollis. 
+						Donec a sem et arcu rutrum posuere nec ut mauris. Nunc fermentum tortor sit amet lectus commodo mollis. 
+						Nam sodales ante neque, sed fermentum orci euismod ut. 
+						Donec molestie dui ligula, ac tincidunt leo luctus in.
+						Pellentesque placerat eros justo, at malesuada dui feugiat in. Praesent accumsan rhoncus tellus.
+						Vestibulum interdum dapibus lectus, in iaculis nunc gravida et. 
+						Proin lacus orci, tempus ut libero ut, volutpat varius ante.
+					</p>
+			</div>
+			<div class="conteudo">
+				<span>Cenario 4.1: esse cenario é o cenario 4 por que sim</span>
+				<p>
+						Nunc tempor consectetur mollis. 
+						Donec a sem et arcu rutrum posuere nec ut mauris. Nunc fermentum tortor sit amet lectus commodo mollis. 
+						Nam sodales ante neque, sed fermentum orci euismod ut. 
+						Donec molestie dui ligula, ac tincidunt leo luctus in.
+						Pellentesque placerat eros justo, at malesuada dui feugiat in. Praesent accumsan rhoncus tellus.
+						Vestibulum interdum dapibus lectus, in iaculis nunc gravida et. 
+						Proin lacus orci, tempus ut libero ut, volutpat varius ante.
+					</p>
+			</div>
+			<div class="conteudo">
+				<span>Cenario 4.2: esse cenario é o cenario 4 por que sim</span>
+				<p>
+						Nunc tempor consectetur mollis. 
+						Donec a sem et arcu rutrum posuere nec ut mauris. Nunc fermentum tortor sit amet lectus commodo mollis. 
+						Nam sodales ante neque, sed fermentum orci euismod ut. 
+						Donec molestie dui ligula, ac tincidunt leo luctus in.
+						Pellentesque placerat eros justo, at malesuada dui feugiat in. Praesent accumsan rhoncus tellus.
+						Vestibulum interdum dapibus lectus, in iaculis nunc gravida et. 
+						Proin lacus orci, tempus ut libero ut, volutpat varius ante.
+					</p>
+			</div>
+			<div class="conteudo">
+				<span>Cenario 4.3: esse cenario é o cenario 4 por que sim</span>
+				<p>
+						Nunc tempor consectetur mollis. 
+						Donec a sem et arcu rutrum posuere nec ut mauris. Nunc fermentum tortor sit amet lectus commodo mollis. 
+						Nam sodales ante neque, sed fermentum orci euismod ut. 
+						Donec molestie dui ligula, ac tincidunt leo luctus in.
+						Pellentesque placerat eros justo, at malesuada dui feugiat in. Praesent accumsan rhoncus tellus.
+						Vestibulum interdum dapibus lectus, in iaculis nunc gravida et. 
+						Proin lacus orci, tempus ut libero ut, volutpat varius ante.
+					</p>
+			</div>
+			<div class="conteudo">
+				<span>Cenario 4.4: esse cenario é o cenario 4 por que sim</span>
+				<p>
+						Nunc tempor consectetur mollis. 
+						Donec a sem et arcu rutrum posuere nec ut mauris. Nunc fermentum tortor sit amet lectus commodo mollis. 
+						Nam sodales ante neque, sed fermentum orci euismod ut. 
+						Donec molestie dui ligula, ac tincidunt leo luctus in.
+						Pellentesque placerat eros justo, at malesuada dui feugiat in. Praesent accumsan rhoncus tellus.
+						Vestibulum interdum dapibus lectus, in iaculis nunc gravida et. 
+						Proin lacus orci, tempus ut libero ut, volutpat varius ante.
+					</p>
+			</div>
+			<div class="conteudo">
+				<span>Cenario 5555: esse cenario é o cenario 4 por que sim</span>
+				<p>
+					Nunc tempor consectetur mollis. 
+					Donec a sem et arcu rutrum posuere nec ut mauris. Nunc fermentum tortor sit amet lectus commodo mollis. 
+					Nam sodales ante neque, sed fermentum orci euismod ut. 
+					Donec molestie dui ligula, ac tincidunt leo luctus in.
+					Pellentesque placerat eros justo, at malesuada dui feugiat in. Praesent accumsan rhoncus tellus.
+					Vestibulum interdum dapibus lectus, in iaculis nunc gravida et. 
+					Proin lacus orci, tempus ut libero ut, volutpat varius ante.
+				</p>
+			</div>
+			<div class="conteudo">
+				<span>Cenario 666: esse cenario é o cenario 4 por que sim</span>
+				<p>
+					Nunc tempor consectetur mollis. 
+					Donec a sem et arcu rutrum posuere nec ut mauris. Nunc fermentum tortor sit amet lectus commodo mollis. 
+					Nam sodales ante neque, sed fermentum orci euismod ut. 
+					Donec molestie dui ligula, ac tincidunt leo luctus in.
+					Pellentesque placerat eros justo, at malesuada dui feugiat in. Praesent accumsan rhoncus tellus.
+					Vestibulum interdum dapibus lectus, in iaculis nunc gravida et. 
+					Proin lacus orci, tempus ut libero ut, volutpat varius ante.
+				</p>
+			</div>
+			<div class="conteudo">
+				<span>Cenario 7777: esse cenario é o cenario 4 por que sim</span>
+				<p>
+					Nunc tempor consectetur mollis. 
+					Donec a sem et arcu rutrum posuere nec ut mauris. Nunc fermentum tortor sit amet lectus commodo mollis. 
+					Nam sodales ante neque, sed fermentum orci euismod ut. 
+					Donec molestie dui ligula, ac tincidunt leo luctus in.
+					Pellentesque placerat eros justo, at malesuada dui feugiat in. Praesent accumsan rhoncus tellus.
+					Vestibulum interdum dapibus lectus, in iaculis nunc gravida et. 
+					Proin lacus orci, tempus ut libero ut, volutpat varius ante.
+				</p>
+			</div>
+			<div class="conteudo">
+				<span>Cenario 88: esse cenario é o cenario 4 por que sim</span>
+				<p>
+					Nunc tempor consectetur mollis. 
+					Donec a sem et arcu rutrum posuere nec ut mauris. Nunc fermentum tortor sit amet lectus commodo mollis. 
+					Nam sodales ante neque, sed fermentum orci euismod ut. 
+					Donec molestie dui ligula, ac tincidunt leo luctus in.
+					Pellentesque placerat eros justo, at malesuada dui feugiat in. Praesent accumsan rhoncus tellus.
+					Vestibulum interdum dapibus lectus, in iaculis nunc gravida et. 
+					Proin lacus orci, tempus ut libero ut, volutpat varius ante.
+				</p>
+			</div>
+		</div>
+	</div>
+	<!---<div id="rodape">Rodape aqui..........</div>-->
+</body>
+</html>
